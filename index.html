@@ -1,0 +1,37 @@
+<!--
+ * @Author: iuukai
+ * @Date: 2022-06-05 18:31:18
+ * @LastEditors: iuukai
+ * @LastEditTime: 2022-06-05 23:38:38
+ * @FilePath: \vercel\proxy\index.html
+ * @Description: 
+ * @QQ/微信: 790331286
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>为一些 http 请求提供中转代理</h1>
+		<p>
+			起因：由于我写了个需要 GitHub 授权登录的无服务器应用（全靠api），而 access_token
+			必须是通过服务端进行请求获取（Gitee 直接请求api就能拿了...），顿时让我束手无策。
+			然后我就在网上搜看能否有代理的api，找到了
+			<code>https://cors-anywhere.azm.workers.dev</code>
+			， 但这个api访问很慢，后来知道了 vercel 可以部署 nodejs 服务写接口，于是便有了该应用。
+		</p>
+		<hr />
+		<h4>注意事项：</h4>
+		<ol>
+			<li>只能进行一些简单的请求（post、get）</li>
+			<li>目标地址 method 是什么类型，那么请求该代理 api 就用什么类型（post、get）</li>
+			<li>目标地址 headers 有哪些，那么请求该代理 api 就设置哪些头信息（post、get）</li>
+			<li>GET：参数请与目标地址拼接在一起</li>
+			<li>POST：参数则发送的 body</li>
+		</ol>
+	</body>
+</html>

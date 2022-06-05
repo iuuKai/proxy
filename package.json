@@ -1,0 +1,17 @@
+{
+	"name": "proxy",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"express": "^4.18.1"
+	},
+	"devDependencies": {},
+	"author": "",
+	"license": "ISC",
+	"description": "为一些 http 请求提供代理"
+}
