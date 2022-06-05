@@ -2,7 +2,7 @@
  * @Author: iuukai
  * @Date: 2022-06-05 18:31:08
  * @LastEditors: iuukai
- * @LastEditTime: 2022-06-05 22:57:17
+ * @LastEditTime: 2022-06-06 00:12:06
  * @FilePath: \vercel\proxy\index.js
  * @Description:
  * @QQ/微信: 790331286
@@ -40,7 +40,7 @@ async function consturctServer() {
 	/**
 	 * Serving static files
 	 */
-	app.use(express.static(path.join(__dirname, '/')))
+	app.use(express.static(path.join(__dirname, '/public')))
 
 	app.use('/proxy', async (req, res) => {
 		try {
