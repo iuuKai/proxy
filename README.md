@@ -2,7 +2,7 @@
  * @Author: iuukai
  * @Date: 2022-06-05 23:39:41
  * @LastEditors: iuukai
- * @LastEditTime: 2022-06-06 00:21:57
+ * @LastEditTime: 2022-06-06 00:50:44
  * @FilePath: \vercel\proxy\README.md
  * @Description:
  * @QQ/微信: 790331286
@@ -11,7 +11,7 @@
 # proxy
 
 ```js
-;(async function () {
+;(async () => {
 	try {
 		const url =
 			'https://iuukai-proxy.vercel.app/proxy?url=https://github.com/login/oauth/access_token'
