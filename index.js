@@ -2,7 +2,7 @@
  * @Author: iuukai
  * @Date: 2022-06-05 18:31:08
  * @LastEditors: iuukai
- * @LastEditTime: 2022-06-06 00:12:06
+ * @LastEditTime: 2022-06-06 00:59:37
  * @FilePath: \vercel\proxy\index.js
  * @Description:
  * @QQ/微信: 790331286
@@ -70,13 +70,7 @@ async function consturctServer() {
 					headers[header] = req.headers[header]
 				}
 			}
-			const moduleResponse = await axios[req.method.toLocaleLowerCase()](
-				url,
-				{
-					...req.body
-				},
-				{ headers }
-			)
+			const moduleResponse = await axios[req.method.toLocaleLowerCase()](url, req.body, { headers })
 			res.send(moduleResponse.data)
 		} catch (moduleResponse) {
 			if (!moduleResponse.body) {
