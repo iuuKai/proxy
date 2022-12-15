@@ -8,7 +8,7 @@
  * @QQ/微信: 790331286
 -->
 
-# proxy
+# proxy 例子：github api 授权
 
 ```js
 ;(async () => {
